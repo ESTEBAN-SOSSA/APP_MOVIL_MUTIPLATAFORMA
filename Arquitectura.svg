@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 720" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4F8DF6"/>
+      <stop offset="100%" stop-color="#3A6FD4"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5DC9A6"/>
+      <stop offset="100%" stop-color="#3FA688"/>
+    </linearGradient>
+    <linearGradient id="g3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F2B14A"/>
+      <stop offset="100%" stop-color="#D89126"/>
+    </linearGradient>
+    <linearGradient id="g4" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8E7BD9"/>
+      <stop offset="100%" stop-color="#6F5AC4"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#555"/>
+    </marker>
+  </defs>
+
+  <!-- Título -->
+  <text x="450" y="35" text-anchor="middle" font-size="22" font-weight="700" fill="#222">Arquitectura mínima viable - App móvil académica</text>
+  <text x="450" y="58" text-anchor="middle" font-size="13" fill="#666">Ionic + Angular + Capacitor</text>
+
+  <!-- Usuario -->
+  <g>
+    <circle cx="80" cy="360" r="32" fill="#fff" stroke="#444" stroke-width="2"/>
+    <circle cx="80" cy="350" r="11" fill="#444"/>
+    <path d="M 60 380 Q 80 360 100 380 L 100 388 L 60 388 Z" fill="#444"/>
+    <text x="80" y="415" text-anchor="middle" font-size="13" font-weight="600" fill="#333">Estudiante</text>
+  </g>
+
+  <!-- Flecha usuario -> UI -->
+  <line x1="115" y1="360" x2="175" y2="360" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Capa 1: Presentación -->
+  <g>
+    <rect x="180" y="90" width="540" height="120" rx="10" fill="url(#g1)" stroke="#2E5BB0" stroke-width="1.5"/>
+    <text x="450" y="120" text-anchor="middle" font-size="16" font-weight="700" fill="#fff">1. Capa de Presentación (UI)</text>
+    <text x="450" y="140" text-anchor="middle" font-size="12" fill="#e8efff">Ionic Components + Angular + SCSS</text>
+
+    <g font-size="11" fill="#fff">
+      <rect x="200" y="155" width="95" height="38" rx="5" fill="rgba(255,255,255,0.18)" stroke="#fff" stroke-width="1"/>
+      <text x="247" y="178" text-anchor="middle">Login</text>
+
+      <rect x="305" y="155" width="95" height="38" rx="5" fill="rgba(255,255,255,0.18)" stroke="#fff" stroke-width="1"/>
+      <text x="352" y="178" text-anchor="middle">Actividades</text>
+
+      <rect x="410" y="155" width="95" height="38" rx="5" fill="rgba(255,255,255,0.18)" stroke="#fff" stroke-width="1"/>
+      <text x="457" y="178" text-anchor="middle">Detalle</text>
+
+      <rect x="515" y="155" width="95" height="38" rx="5" fill="rgba(255,255,255,0.18)" stroke="#fff" stroke-width="1"/>
+      <text x="562" y="178" text-anchor="middle">Evidencia</text>
+
+      <rect x="620" y="155" width="90" height="38" rx="5" fill="rgba(255,255,255,0.18)" stroke="#fff" stroke-width="1"/>
+      <text x="665" y="178" text-anchor="middle">Notif.</text>
+    </g>
+  </g>
+
+  <!-- Flecha 1->2 -->
+  <line x1="450" y1="215" x2="450" y2="245" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Capa 2: Lógica -->
+  <g>
+    <rect x="180" y="250" width="540" height="110" rx="10" fill="url(#g2)" stroke="#2C8567" stroke-width="1.5"/>
+    <text x="450" y="278" text-anchor="middle" font-size="16" font-weight="700" fill="#fff">2. Capa de Lógica / Servicios</text>
+    <text x="450" y="296" text-anchor="middle" font-size="12" fill="#e8fff5">Servicios de Angular (Inyección de dependencias)</text>
+
+    <g font-size="11" fill="#fff">
+      <rect x="200" y="310" width="115" height="35" rx="5" fill="rgba(255,255,255,0.18)" stroke="#fff" stroke-width="1"/>
+      <text x="257" y="332" text-anchor="middle">AuthService</text>
+
+      <rect x="325" y="310" width="125" height="35" rx="5" fill="rgba(255,255,255,0.18)" stroke="#fff" stroke-width="1"/>
+      <text x="387" y="332" text-anchor="middle">ActividadService</text>
+
+      <rect x="460" y="310" width="115" height="35" rx="5" fill="rgba(255,255,255,0.18)" stroke="#fff" stroke-width="1"/>
+      <text x="517" y="332" text-anchor="middle">SyncService</text>
+
+      <rect x="585" y="310" width="125" height="35" rx="5" fill="rgba(255,255,255,0.18)" stroke="#fff" stroke-width="1"/>
+      <text x="647" y="332" text-anchor="middle">NotificationSvc</text>
+    </g>
+  </g>
+
+  <!-- Flecha 2->3 -->
+  <line x1="450" y1="365" x2="450" y2="395" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Capa 3: Datos y plugins -->
+  <g>
+    <rect x="180" y="400" width="540" height="140" rx="10" fill="url(#g3)" stroke="#A66B14" stroke-width="1.5"/>
+    <text x="450" y="428" text-anchor="middle" font-size="16" font-weight="700" fill="#fff">3. Capa de Datos y Acceso al Dispositivo</text>
+
+    <!-- Almacenamiento local -->
+    <rect x="200" y="445" width="225" height="80" rx="8" fill="rgba(255,255,255,0.20)" stroke="#fff" stroke-width="1.2"/>
+    <text x="312" y="465" text-anchor="middle" font-size="13" font-weight="600" fill="#fff">Almacenamiento local</text>
+    <text x="312" y="485" text-anchor="middle" font-size="11" fill="#fff8e8">SQLite (Capacitor) e</text>
+    <text x="312" y="500" text-anchor="middle" font-size="11" fill="#fff8e8">Ionic Storage para</text>
+    <text x="312" y="515" text-anchor="middle" font-size="11" fill="#fff8e8">caché y modo offline</text>
+
+    <!-- Plugins -->
+    <rect x="475" y="445" width="225" height="80" rx="8" fill="rgba(255,255,255,0.20)" stroke="#fff" stroke-width="1.2"/>
+    <text x="587" y="465" text-anchor="middle" font-size="13" font-weight="600" fill="#fff">Capacitor Plugins</text>
+    <text x="587" y="485" text-anchor="middle" font-size="11" fill="#fff8e8">Camera, Geolocation,</text>
+    <text x="587" y="500" text-anchor="middle" font-size="11" fill="#fff8e8">Push Notifications,</text>
+    <text x="587" y="515" text-anchor="middle" font-size="11" fill="#fff8e8">Network, Filesystem</text>
+  </g>
+
+  <!-- Flecha 3->4 -->
+  <line x1="312" y1="545" x2="312" y2="580" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="587" y1="545" x2="587" y2="580" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Capa 4: Backend / servicios externos -->
+  <g>
+    <rect x="180" y="585" width="540" height="110" rx="10" fill="url(#g4)" stroke="#574593" stroke-width="1.5"/>
+    <text x="450" y="612" text-anchor="middle" font-size="16" font-weight="700" fill="#fff">4. Backend y Servicios Externos</text>
+
+    <rect x="200" y="625" width="225" height="55" rx="8" fill="rgba(255,255,255,0.20)" stroke="#fff" stroke-width="1.2"/>
+    <text x="312" y="648" text-anchor="middle" font-size="13" font-weight="600" fill="#fff">API REST (simulada)</text>
+    <text x="312" y="668" text-anchor="middle" font-size="11" fill="#efeaff">Node.js / json-server</text>
+
+    <rect x="475" y="625" width="225" height="55" rx="8" fill="rgba(255,255,255,0.20)" stroke="#fff" stroke-width="1.2"/>
+    <text x="587" y="648" text-anchor="middle" font-size="13" font-weight="600" fill="#fff">Firebase Cloud Messaging</text>
+    <text x="587" y="668" text-anchor="middle" font-size="11" fill="#efeaff">Notificaciones push</text>
+  </g>
+
+  <!-- Hardware lateral -->
+  <g>
+    <rect x="750" y="400" width="130" height="140" rx="10" fill="#fff" stroke="#888" stroke-width="1.5" stroke-dasharray="5,3"/>
+    <text x="815" y="424" text-anchor="middle" font-size="13" font-weight="700" fill="#444">Hardware</text>
+    <text x="815" y="450" text-anchor="middle" font-size="11" fill="#555">Cámara</text>
+    <text x="815" y="470" text-anchor="middle" font-size="11" fill="#555">GPS</text>
+    <text x="815" y="490" text-anchor="middle" font-size="11" fill="#555">Notificaciones</text>
+    <text x="815" y="510" text-anchor="middle" font-size="11" fill="#555">Almacenamiento</text>
+    <text x="815" y="530" text-anchor="middle" font-size="11" fill="#555">Red</text>
+  </g>
+  <line x1="720" y1="475" x2="750" y2="475" stroke="#555" stroke-width="2" marker-end="url(#arrow)" stroke-dasharray="4,3"/>
+</svg>

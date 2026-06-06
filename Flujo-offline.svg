@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 480" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#555"/>
+    </marker>
+  </defs>
+
+  <text x="450" y="35" text-anchor="middle" font-size="20" font-weight="700" fill="#222">Flujo de funcionamiento offline y sincronización</text>
+
+  <!-- Caja 1: Usuario abre la app -->
+  <rect x="40" y="90" width="170" height="80" rx="10" fill="#E8F1FE" stroke="#4F8DF6" stroke-width="2"/>
+  <text x="125" y="120" text-anchor="middle" font-size="13" font-weight="600" fill="#1B3D7A">Usuario abre</text>
+  <text x="125" y="138" text-anchor="middle" font-size="13" font-weight="600" fill="#1B3D7A">la app</text>
+  <text x="125" y="158" text-anchor="middle" font-size="11" fill="#444">Consulta actividades</text>
+
+  <!-- Decisión: ¿Hay internet? -->
+  <polygon points="320,130 430,80 540,130 430,180" fill="#FFF4DC" stroke="#D89126" stroke-width="2"/>
+  <text x="430" y="125" text-anchor="middle" font-size="13" font-weight="700" fill="#7A4F0F">¿Hay conexión</text>
+  <text x="430" y="143" text-anchor="middle" font-size="13" font-weight="700" fill="#7A4F0F">a internet?</text>
+
+  <line x1="210" y1="130" x2="320" y2="130" stroke="#555" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- SI: trae API -->
+  <line x1="540" y1="130" x2="640" y2="130" stroke="#3FA688" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="585" y="120" text-anchor="middle" font-size="12" font-weight="700" fill="#3FA688">SÍ</text>
+
+  <rect x="640" y="85" width="220" height="95" rx="10" fill="#E6F7EF" stroke="#3FA688" stroke-width="2"/>
+  <text x="750" y="110" text-anchor="middle" font-size="13" font-weight="600" fill="#1F5A45">Consulta API REST</text>
+  <text x="750" y="130" text-anchor="middle" font-size="11" fill="#444">y guarda copia local</text>
+  <text x="750" y="150" text-anchor="middle" font-size="11" fill="#444">en SQLite / Storage</text>
+  <text x="750" y="170" text-anchor="middle" font-size="11" font-style="italic" fill="#666">(estrategia cache-first)</text>
+
+  <!-- NO: usa local -->
+  <line x1="430" y1="180" x2="430" y2="240" stroke="#D89126" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="445" y="215" font-size="12" font-weight="700" fill="#D89126">NO</text>
+
+  <rect x="320" y="250" width="220" height="80" rx="10" fill="#FFF4DC" stroke="#D89126" stroke-width="2"/>
+  <text x="430" y="278" text-anchor="middle" font-size="13" font-weight="600" fill="#7A4F0F">Lee datos guardados</text>
+  <text x="430" y="298" text-anchor="middle" font-size="13" font-weight="600" fill="#7A4F0F">en el dispositivo</text>
+  <text x="430" y="318" text-anchor="middle" font-size="11" fill="#666">La app sigue funcionando</text>
+
+  <!-- Acciones del usuario sin internet -->
+  <rect x="40" y="370" width="200" height="85" rx="10" fill="#F1ECFD" stroke="#6F5AC4" stroke-width="2"/>
+  <text x="140" y="395" text-anchor="middle" font-size="13" font-weight="600" fill="#3D2E80">El usuario toma una</text>
+  <text x="140" y="413" text-anchor="middle" font-size="13" font-weight="600" fill="#3D2E80">foto de evidencia</text>
+  <text x="140" y="433" text-anchor="middle" font-size="11" fill="#666">aunque no haya internet</text>
+
+  <line x1="240" y1="412" x2="310" y2="412" stroke="#555" stroke-width="2" marker-end="url(#ar)"/>
+
+  <rect x="310" y="370" width="240" height="85" rx="10" fill="#F1ECFD" stroke="#6F5AC4" stroke-width="2"/>
+  <text x="430" y="395" text-anchor="middle" font-size="13" font-weight="600" fill="#3D2E80">Se guarda en cola local</text>
+  <text x="430" y="413" text-anchor="middle" font-size="11" fill="#666">(SQLite + Filesystem)</text>
+  <text x="430" y="432" text-anchor="middle" font-size="11" fill="#666">con estado: pendiente</text>
+
+  <line x1="550" y1="412" x2="630" y2="412" stroke="#555" stroke-width="2" marker-end="url(#ar)"/>
+
+  <rect x="630" y="370" width="230" height="85" rx="10" fill="#E6F7EF" stroke="#3FA688" stroke-width="2"/>
+  <text x="745" y="395" text-anchor="middle" font-size="13" font-weight="600" fill="#1F5A45">Cuando vuelve la</text>
+  <text x="745" y="413" text-anchor="middle" font-size="13" font-weight="600" fill="#1F5A45">conexión, sincroniza</text>
+  <text x="745" y="432" text-anchor="middle" font-size="11" fill="#666">SyncService envía a la API</text>
+
+  <!-- línea desde la caja amarilla hacia la izquierda inferior -->
+  <line x1="320" y1="290" x2="140" y2="290" stroke="#888" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <line x1="140" y1="290" x2="140" y2="370" stroke="#888" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#ar)"/>
+</svg>

@@ -47,7 +47,7 @@ Las historias están ordenadas de mayor a menor prioridad para el negocio.
 
 ## 3. Matriz comparativa de enfoques
 
-Se comparan cuatro enfoques posibles para construir la solución usando criterios técnicos relevantes para el caso. La última fila resume la valoración final con una escala simple: ⭐ baja, ⭐⭐ media, ⭐⭐⭐ alta.
+Se comparan cuatro enfoques posibles para construir la solución usando criterios técnicos relevantes para el caso. 
 
 ### Tabla 1. Matriz comparativa de enfoques técnicos
 
@@ -102,7 +102,7 @@ Flutter compite muy de cerca con Ionic y, en otros contextos, podría ser la mej
 
 La arquitectura se organiza en **cuatro capas** claramente separadas, lo que permite que cada parte de la aplicación tenga una responsabilidad bien definida.
 
-![Arquitectura por capas](imagenes/arquitectura.svg)
+REVISAR ARCHIVO DE Arquitectura
 
 ### Descripción de las capas
 
@@ -143,7 +143,7 @@ Las **notificaciones push** se manejan con **Firebase Cloud Messaging (FCM)**, q
 
 Uno de los puntos más importantes de la propuesta es el comportamiento sin internet. El diagrama siguiente muestra cómo se resuelve.
 
-![Flujo offline](imagenes/flujo-offline.svg)
+REVISAR ARCHIVO DE Flujo-offline
 
 La idea central es:
 
